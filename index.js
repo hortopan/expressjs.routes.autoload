@@ -35,7 +35,7 @@ module.exports = function(loadPath,recursive){
 		if (!recursive){
 			file = path.resolve(loadPath , files[i]);
 		} else {
-			file = files[i];
+			file = path.resolve(files[i]);
 		}
 
 		if (fs.statSync(file).isFile()){
