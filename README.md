@@ -6,7 +6,7 @@ Supports setting a *path* directory and allows *recursive* loading from a direct
 
 ##Installation
 
-``` 
+```
 npm install expressjs.routes.autoload
 ```
 
@@ -16,7 +16,7 @@ npm install expressjs.routes.autoload
 app.use(require('expressjs.routes.autoload')(path = './routes', recursive = false));
 ```
 
-Put your models within the **./rotes** directory and add models in files:
+Put your models within the **./routes** directory and add models in individual files like this:
 
 ```
 module.exports = function(router){
@@ -33,7 +33,22 @@ module.exports = function(router){
 
 ```
 
+Feel free to create your own hierarchy of files or directories!
+
+Ex:
+
+```
+routes/api/item/get.js
+routes/api/item/post.js
+                
+or 
+
+routes/api_item_get.js
+routes/api_item_delete.js
+```
+
 ## Release History
 
+* 0.1.2 Fixed readme
 * 0.1.1 Fixed paths
 * 0.1.0 Initial release

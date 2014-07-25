@@ -1,6 +1,6 @@
 {
   "name": "express.js.autoload",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Autloads express.js routes from a path",
   "main": "index.js",
   "scripts": {
