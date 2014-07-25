@@ -20,13 +20,15 @@
   ],
   "author": "Alex Hortopan <alex@hortopan.com> (https://github.com/hortopan)",
   "license": "MIT",
-  "licenses": [
-    "type" : "MIT",
-    "url" : "https://github.com/hortopan/expressjs.routes.autoload/blob/master/LICENSE-MIT"
-  ]
   "bugs": {
     "url": "https://github.com/hortopan/expressjs.routes.autoload/issues"
   },
+  "licenses": [
+    {
+    "type" : "MIT",
+    "url" : "https://github.com/hortopan/expressjs.routes.autoload/blob/master/LICENSE-MIT"
+   }  
+  ],
   "devDependencies": {
     "express": "~4.6.1",
     "mocha": "~1.21.0",
