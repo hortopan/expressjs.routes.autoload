@@ -35,4 +35,5 @@ module.exports = function(router){
 
 ## Release History
 
+* 0.1.1 Fixed paths
 * 0.1.0 Initial release
