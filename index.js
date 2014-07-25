@@ -1,13 +1,13 @@
-module.exports = function(path,recursive){
+module.exports = function(loadPath,recursive){
 
 	var express = require('express');
 	var router = express.Router();
 	var fs = require('fs');
-
+	var path = require('path');
 	
 	
-	if (!path){
-		path  = './routes';
+	if (!loadPath){
+		loadPath  = './routes';
 	} 
 	
 	var walk = function(dir) {
@@ -24,16 +24,16 @@ module.exports = function(path,recursive){
 
 	var files = [];
 	if (!recursive){
-		files = fs.readdirSync(path);
+		files = fs.readdirSync(loadPath);
 	} else {
-		files = walk(path);
+		files = walk(loadPath);
 	}
 	
 	for (var i in files){
 
 		var file = '';
 		if (!recursive){
-			file = path + '/' + files[i];
+			file = path.resolve(loadPath , files[i]);
 		} else {
 			file = files[i];
 		}
