@@ -49,6 +49,7 @@ routes/api_item_delete.js
 
 ## Release History
 
+* 0.1.3 Fixed package.json typo
 * 0.1.2 Fixed readme
 * 0.1.1 Fixed paths
 * 0.1.0 Initial release
