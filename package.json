@@ -1,10 +1,10 @@
 {
   "name": "expressjs.routes.autoload",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Dynamically autoload Express routes from a path with support for recursive loading.",
   "main": "index.js",
   "scripts": {
-	  "test": "make test"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
@@ -19,20 +19,23 @@
     "autload"
   ],
   "author": "Alex Hortopan <alex@hortopan.com> (https://github.com/hortopan)",
-  "license": "MIT",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/hortopan/expressjs.routes.autoload/issues"
   },
   "licenses": [
     {
-    "type" : "MIT",
-    "url" : "https://github.com/hortopan/expressjs.routes.autoload/blob/master/LICENSE-MIT"
-   }  
+      "type": "MIT",
+      "url": "https://github.com/hortopan/expressjs.routes.autoload/blob/master/LICENSE-MIT"
+    }
   ],
   "devDependencies": {
     "express": "~4.6.1",
     "mocha": "~1.21.0",
     "chai": "~1.9.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "directories": {
+    "test": "test"
+  }
 }

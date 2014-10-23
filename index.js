@@ -38,7 +38,7 @@ module.exports = function(loadPath,recursive){
 			file = path.resolve(files[i]);
 		}
 
-		if (fs.statSync(file).isFile()){
+		if (fs.statSync(file).isFile() && path.extname(file).toLowerCase() == '.js' && path.basename(file).substr(0,1) != '.'){
 			router = require(file)(router);
 		}
 
