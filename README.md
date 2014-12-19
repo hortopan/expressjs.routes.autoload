@@ -12,7 +12,7 @@ npm install expressjs.routes.autoload --save
 
 ## Usage
 
-```
+```javascript
 app.use(require('expressjs.routes.autoload')(path.join(__dirname, './routes'), true));
 
 //first parameter is routes directory,
@@ -22,7 +22,7 @@ app.use(require('expressjs.routes.autoload')(path.join(__dirname, './routes'), t
 
 Put your models within the **./routes** directory and add models in individual files like this:
 
-```
+```javascript
 module.exports = function(router){
 
         router.get('/', function(req, res) {
