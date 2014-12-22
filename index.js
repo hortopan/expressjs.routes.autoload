@@ -38,8 +38,14 @@ module.exports = function(loadPath,recursive){
 			file = path.resolve(files[i]);
 		}
 
-		if (fs.statSync(file).isFile() && path.extname(file).toLowerCase() == '.js' && path.basename(file).substr(0,1) != '.'){
-			router = require(file)(router);
+		if (fs.statSync(file).isFile() &&
+			path.extname(file).toLowerCase() == '.js' &&
+			path.basename(file).substr(0,1) != '.'){
+			try {
+				router = require(file)(router);
+			} catch(e) {
+				throw new Error("Error when loading route file "+file);
+			}
 		}
 
 	}
