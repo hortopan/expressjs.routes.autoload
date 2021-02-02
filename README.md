@@ -49,6 +49,7 @@ routes/api_item_delete.js
 
 ## Release History
 
+* 0.1.9 Version bump mocha
 * 0.1.8 Version bump express
 * 0.1.7 Ignoring other files in routes systems (only loading .js files and ignoring temporary dev files, etc that previously broke the system)
 * 0.1.6 Fixed readme + republished as a expressjs.routes.autoload / previously express.js.autoload
