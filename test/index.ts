@@ -1,14 +1,19 @@
-import { RoutesLoader } from '../src/index';
-import { expect } from 'chai';
+import { RoutesLoader } from "../src/index";
+import { expect } from "chai";
 
-describe('#load routes', () => {
-	it('load route', () => {
-		expect(RoutesLoader('./test/routes', false).stack[0].route.path).to.equal('/');
-	});
+describe("#load routes", () => {
+  it("load route", () => {
+    const routes = RoutesLoader("./test/routes", { recursive: false }).stack;
+    expect(routes[0].route.path).to.equal("/");
+    expect(routes[1].route.path).to.equal("/typescript");
+  });
 });
 
-describe('#load routes recursive', () => {
-	it('load route recursive', () => {
-		expect(RoutesLoader('./test/routes', true).stack[1].route.path).to.equal('/recursive');
-	});
+describe("#load routes recursive", () => {
+  it("load route recursive", () => {
+    const routes = RoutesLoader("./test/routes", { recursive: true }).stack;
+    expect(routes[0].route.path).to.equal("/");
+    expect(routes[1].route.path).to.equal("/recursive");
+    expect(routes[2].route.path).to.equal("/typescript");
+  });
 });
