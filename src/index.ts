@@ -1,6 +1,11 @@
 import { Router } from "express";
 
-export function RoutesLoader(loadPath: string, recursive: boolean): Router {
+export function RoutesLoader(
+  loadPath: string,
+  options: { recursive?: boolean } = {}
+): Router {
+  const recursive: boolean = options.recursive !== false; // defaults to true
+
   const express = require("express");
   const fs = require("fs");
   const path = require("path");
